@@ -136,47 +136,47 @@ Use when you still want normal escaping:
 }
 ```
 
-## Nested object / array example
+Parsers are provided for each language along with demos. Below shown is the python example
 
-### Normal JSON
+## SAMBARJSON in Action - Nesting Illustration 
 
-```json
-{
-  "pipeline": [
+```python
+>>> SAMBARJSON.show_demo()
+--- sample sambarjson ---
+
     {
-      "step": "parse",
-      "options": {
-        "strict": true,
-        "encoding": "utf-8"
+      "id": 505,
+      "config_name": __CLASSICJSONSTART__{"name": "Standard Config", "version": "1.0", "enabled": true}__CLASSICJSONFINISH__,
+      "payload": __RAWSTRINGSTART__
+    <p>Hello "World"</p>
+    C:\Users\Admin
+    __RAWSTRINGFINSIH__,
+      "embedded_tree": __SAMBARJSONSTART__
+      {
+        "sub_id": 99,
+        "active": true,
+        "tags": ["alpha", "beta"],
+        "inner_config": __CLASSICJSONSTART__{"name": "Inner Config", "version": "A.1", "enabled": false}__CLASSICJSONFINISH__
       }
-    },
-    {
-      "step": "validate",
-      "rules": ["required", "type-check"]
+      __SAMBARJSONFINISH__
     }
-  ]
-}
-```
 
-### sambarJSON
 
-```txt
+
+--- From sambarjson to regular JSON ---
 {
-  "pipeline": __SAMBARJSONSTART__
-  [
-    {
-      "step": "parse",
-      "options": {
-        "strict": true,
-        "encoding": "utf-8"
-      }
-    },
-    {
-      "step": "validate",
-      "rules": ["required", "type-check"]
-    }
-  ]
-  __SAMBARJSONFINISH__
+  "id": 505,
+  "config_name": "{\"name\": \"Standard Config\", \"version\": \"1.0\", \"enabled\": true}",
+  "payload": "    <p>Hello \"World\"</p>\n    C:\\Users\\Admin\n    ",
+  "embedded_tree": {
+    "sub_id": 99,
+    "active": true,
+    "tags": [
+      "alpha",
+      "beta"
+    ],
+    "inner_config": "{\"name\": \"Inner Config\", \"version\": \"A.1\", \"enabled\": false}"
+  }
 }
-```
+
 ```
