@@ -129,7 +129,7 @@ __RAWSTRINGFINSIH__
 
 Use when you still want normal escaping:
 
-```json
+```txt
 {
   "version": __CLASSICJSONSTART__release-1.2.3\nbuild: "stable"__CLASSICJSONFINISH__,
   "warning": __CLASSICJSONSTART__File not found: "C:\temp\config.json"__CLASSICJSONFINISH__
