@@ -180,3 +180,6 @@ Parsers are provided for each language along with demos. Below shown is the pyth
 }
 
 ```
+To test the python parsing you can run the testing_sambarjson.py
+
+I have also added javascript implementation you can test its parsing by opening testing_sambarjson.html in a browser
