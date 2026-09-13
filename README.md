@@ -1,4 +1,4 @@
-# sambarJSON
+# sambarjson
 
 Same JSON, but extended with support for raw strings and nested objects.
 
