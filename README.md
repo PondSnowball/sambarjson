@@ -43,7 +43,7 @@ sambarJSON lets you write the text as-is.
 
 ### Same data in sambarJSON (easier to write)
 
-```json
+```txt
 {
   "id": 505,
   "sql_query": __RAWSTRINGSTART__
@@ -87,7 +87,7 @@ __RAWSTRINGFINSIH__,
 
 ### sambarJSON
 
-```json
+```txt
 {
   "template": __RAWSTRINGSTART__
 <div class="user-card">
@@ -113,7 +113,7 @@ __RAWSTRINGFINSIH__
 
 ### sambarJSON
 
-```json
+```txt
 {
   "python_code": __RAWSTRINGSTART__
 def process(data):
@@ -160,7 +160,7 @@ Use when you still want normal escaping:
 
 ### sambarJSON
 
-```json
+```txt
 {
   "pipeline": __SAMBARJSONSTART__
   [
