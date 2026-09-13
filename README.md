@@ -138,7 +138,7 @@ Use when you still want normal escaping:
 
 Parsers are provided for each language along with demos. Below shown is the python example
 
-## SAMBARJSON in Action - Nesting Illustration 
+## sambarJSON - Nesting and Object Support 
 
 ```python
 >>> SAMBARJSON.show_demo()
