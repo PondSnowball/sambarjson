@@ -12,7 +12,7 @@ def convert_sambarjson_to_json(sambarjson_str):
     
     processed = string_pattern.sub(escape_string, sambarjson_str)
 
-    # 2. Handle sambarjson: splices sambar JSON objects/arrays directly into the structure (no quotes)
+    # 2. Handle sambarjson: splices sambarJSON objects/arrays directly into the structure (no quotes)
     sambarjson_pattern = re.compile(r'__SAMBARJSONSTART__(.*?)__SAMBARJSONFINISH__', re.DOTALL)
     def splice_sambarjson(match):
         fragment = match.group(1).strip()
@@ -83,7 +83,7 @@ def show_demo():
         "sub_id": 99,
         "active": true,
         "tags": ["alpha", "beta"],
-        "inner_config": __CLASSICJSONSTART__{"name": "Inner Config", "version": "A.1", "enabled": false}__CLASSICJSONFINISH__
+        "inner_config":{"name": "Inner Config", "version": "A.1", "enabled": false}
       }
       __SAMBARJSONFINISH__
     }
@@ -91,4 +91,6 @@ def show_demo():
     print("--- sample sambarjson ---")
     print(__DEMO_sample_sambarjson)
     print("\n\n--- From sambarjson to regular JSON ---")
-    print(convert_sambarjson_to_json(__DEMO_sample_sambarjson))
+    converted_payload = convert_sambarjson_to_json(__DEMO_sample_sambarjson)
+    print(converted_payload)
+    print("is the converted payload a valid json?",is_valid_json(converted_payload))
