@@ -140,9 +140,9 @@ Parsers are provided for each language along with demos. Below shown is the pyth
 
 ## sambarJSON - Nesting and Object Support 
 
+You intuitively write what you need to
+
 ```text
->>> show_demo()
---- sample sambarjson ---
 
     {
       "id": 505,
@@ -161,8 +161,10 @@ Parsers are provided for each language along with demos. Below shown is the pyth
       __SAMBARJSONFINISH__
     }
 
+```
+The escaping takes care of itself.
 
-
+```text
 --- From sambarjson to regular JSON ---
 {
   "id": 505,
