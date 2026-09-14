@@ -143,7 +143,7 @@ Parsers are provided for each language along with demos. Below shown is the pyth
 You intuitively write what you need to
 
 ```text
-
+>>> show_demo() // this function shows a demonstration in python
     {
       "id": 505,
       "config_name": __CLASSICJSONSTART__{"name": "Standard Config", "version": "1.0", "enabled": true}__CLASSICJSONFINISH__,
