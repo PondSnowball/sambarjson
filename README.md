@@ -140,7 +140,7 @@ Parsers are provided for each language along with demos. Below shown is the pyth
 
 ## sambarJSON - Nesting and Object Support 
 
-You intuitively write what you need to
+You intuitively write what you need to (as shown).
 
 ```text
 >>> show_demo() // this function shows a demonstration in python
@@ -162,7 +162,7 @@ You intuitively write what you need to
     }
 
 ```
-The escaping takes care of itself.
+Required escaping is added automatically.
 
 ```text
 --- From sambarjson to regular JSON ---
