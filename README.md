@@ -10,7 +10,7 @@ sambarJSON lets you write the text as-is.
 ## Markers
 
 - `__RAWSTRINGSTART__` ... `__RAWSTRINGFINSIH__`  
-  Text with no escaping needed.
+  Text with no escaping needed. Note that these the ignore the newlines in their own line but respect newlines in between.
 
 - `__CLASSICJSONSTART__` ... `__CLASSICJSONFINISH__`  
   Text that still uses normal JSON escapes.
