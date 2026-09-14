@@ -140,8 +140,8 @@ Parsers are provided for each language along with demos. Below shown is the pyth
 
 ## sambarJSON - Nesting and Object Support 
 
-```python
->>> SAMBARJSON.show_demo()
+```text
+>>> show_demo()
 --- sample sambarjson ---
 
     {
@@ -156,7 +156,7 @@ Parsers are provided for each language along with demos. Below shown is the pyth
         "sub_id": 99,
         "active": true,
         "tags": ["alpha", "beta"],
-        "inner_config": __CLASSICJSONSTART__{"name": "Inner Config", "version": "A.1", "enabled": false}__CLASSICJSONFINISH__
+        "inner_config":{"name": "Inner Config", "version": "A.1", "enabled": false}
       }
       __SAMBARJSONFINISH__
     }
@@ -175,9 +175,14 @@ Parsers are provided for each language along with demos. Below shown is the pyth
       "alpha",
       "beta"
     ],
-    "inner_config": "{\"name\": \"Inner Config\", \"version\": \"A.1\", \"enabled\": false}"
+    "inner_config": {
+      "name": "Inner Config",
+      "version": "A.1",
+      "enabled": false
+    }
   }
 }
+is the converted payload a valid json? True
 
 ```
 
